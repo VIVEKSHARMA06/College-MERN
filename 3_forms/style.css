@@ -1,0 +1,46 @@
+body{
+    background-color: white;
+    text-align: center;
+}
+
+.box{
+    display: inline-block;
+    background-color: #d3d3d3;
+    border: 2px solid black;
+    padding: 30px 40px;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    padding: 10px 15px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"]{
+    width: 250px;
+    height: 25px;
+}
+
+textarea{
+    width: 250px;
+    resize: none;
+}
+
+input[type="submit"],
+input[type="reset"]{
+    padding: 5px 20px;
+    margin-right: 10px;
+}

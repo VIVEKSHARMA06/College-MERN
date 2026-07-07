@@ -1,0 +1,10 @@
+.box {
+    border: solid black;
+    padding: 0 15px;
+    display: inline-block;
+}
+
+img{
+    object-fit: cover;
+    box-shadow: 5px 5px 10px 2px gray;
+}
