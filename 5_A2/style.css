@@ -1,0 +1,20 @@
+caption{
+    font-weight: bold;
+}
+
+.special {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.last {
+    margin: auto;
+}
+
+.last td {
+    padding-right: 25px;
+}
+
+.last th {
+    padding: 0 15px;
+}
