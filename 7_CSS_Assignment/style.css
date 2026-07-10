@@ -1,0 +1,45 @@
+h1 {
+    color: red;
+}
+
+h2 {
+    color: rgb(6, 236, 6);
+}
+
+ol li {
+    margin: 1rem;
+}
+
+span {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+ol li:last-child {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+ul li {
+    color: brown;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+
+ul {
+    margin-top: 3rem;
+}
+
+small {
+    font-size: .6rem;
+}
+
+p,small,a {
+    color: brown;
+}
+
+a {
+    background-color: yellow;
+}
+
