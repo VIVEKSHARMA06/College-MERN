@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.welcome {
+    margin: auto;
+    border: 5px solid blue;
+    height: 200px;
+    width: 600px;
+    margin-top: 0;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(145, 63, 145);
+    font-size: 2rem;
+    /* font-style: italic; */
+    font-weight: 900;
+    line-height: 3.5rem;
+    text-shadow: 2px 2px 2px rgb(132, 29, 192);
+}
+
+hr {
+    font-weight: 900;
+    border: 1px solid rgb(132, 29, 192);
+    /* width: 100vw; */
+}
+
+.main {
+    border: 6px solid blue;
+    text-shadow: 2px 2px 2px rgb(132, 29, 192);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+}
+
+.card {
+    border: 5px solid red;
+    box-shadow: 3px 3px 5px 5px purple;
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    color: rgb(58, 1, 58);
+    font-size: 1.5rem;
+}
+
+ul {
+    padding: 0px 10px;
+}
+
+.card ul li{
+    font-weight: 600;
+    /* font-style: italic; */
+    padding: 6px 0px;
+}
+
+.next {
+    line-height: 1.5rem;
+    height: 275px;
+    margin-top: 50px;
+    color: purple;
+}
+
+.next ul li{
+    font-style: normal;
+    line-height: 20px;
+}
+
+.right ul li{
+    text-align: center;
+    font-style: normal;
+    padding: 8px;
+    /* text-shadow: none; */
+}
+
+.rate {
+    color: red;
+    text-shadow: 2px 2px 2px red;
+}
+input, button {
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 3px purple;
+    padding: .25rem 10px;
+}
+
+.store{
+    border: 7px solid cadetblue;
+    width: 60vw;
+    margin: auto;
+    text-align: center;
+    background-color: yellowgreen;
+    margin-top: 2rem;;
+}
+
+.items {
+    display: flex;
+    justify-content: space-around;
+    background-color: yellow;
+}
+
+h1 {
+    color: red;
+    text-shadow: none;
+    text-align: center;
+}
+
+h3 {
+    font-size:x-large;
+}
+
+.items li {
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.others {
+    background-color: yellow;
+    margin: 0.5rem 3.5rem ;
+    padding-bottom: 1rem;
+}
+
+.others h1 {
+    padding: 1.5rem;
+}
+
+.others h3 {
+    font-size: 19px;
+    font-style: italic;
+}
