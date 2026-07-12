@@ -9,3 +9,4 @@ openBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     sidebar.classList.remove("active");
 });
+console.log("New Project");
