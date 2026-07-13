@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212;
+}
+.main{ 
+    display: flex;
+    height: 100vh;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
+    /* align-items: baseline; */
+    /* align-content: end; */
+}
+
+/* #second {
+    align-self: last baseline;
+    justify-self: center;
+} */
+
+.cards {
+    height: 150px;
+    width: 125px;
+    background-color: grey;
+    border: 2px solid whitesmoke;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
