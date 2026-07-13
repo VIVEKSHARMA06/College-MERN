@@ -121,17 +121,11 @@ button:hover {
     margin-top: 1rem;
 }
 
-.main {
-    color: white;
-    font-size: 1rem;
-    padding: 2rem 5rem;
-
-}
 .footer {
     background-color: #2B3035;
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    /* position: sticky; */
     bottom: 0;
     left: 0;
     width: 100vw;
@@ -167,4 +161,22 @@ li {
 
 .foot-left h3 {
     color: #ffffffc3;
+}
+
+.main {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+}
+
+.cards {
+    height: 275px;
+    width: 250px;
+    background-color: grey;
+    border: 2px solid whitesmoke;
+    border-radius: 0.5rem;
+    margin: 1rem;
+
 }
