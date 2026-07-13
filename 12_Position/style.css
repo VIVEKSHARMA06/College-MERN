@@ -1,0 +1,47 @@
+
+.main {
+    position: relative;
+    left: 500px;
+    top: 100px;
+}
+
+.cards {
+    height: 100px;
+    width: 100px;
+    color: white;
+}
+
+.cards p {
+    position: relative;
+    top: 80px;
+}
+
+.card1 {
+    background-color: blue;
+    z-index: 1;
+    position: relative;
+}
+
+.card2 {
+    background-color: red;
+    z-index: 2;
+    position: relative;
+    left:50px;
+    top: 50px;
+}
+
+.card3 {
+    background-color: yellow;
+    z-index: 3;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+.card4 {
+    background-color: green;
+    z-index: 4;
+    position: relative;
+    top: 150px;
+    left: 150px;
+}
