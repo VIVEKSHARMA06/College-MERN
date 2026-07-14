@@ -178,5 +178,11 @@ li {
     border: 2px solid whitesmoke;
     border-radius: 0.5rem;
     margin: 1rem;
+    overflow: hidden;
+}
 
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
