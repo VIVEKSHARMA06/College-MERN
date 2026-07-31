@@ -15,7 +15,6 @@ can grow or shrink during runtime.
 let arr = [10, 20, 30];
 console.log(arr); // [10,20,30]
 
-
 /*
 ===========================================================================================
 2. ARRAY DECLARATION & INITIALIZATION
@@ -31,16 +30,18 @@ let a = [];
 let numbers = [1, 2, 3];
 
 // Mixed Data Types
-let mixed = [10, "Hello", true, null, {name:"Vivek"}];
+let mixed = [10, "Hello", true, null, { name: "Vivek" }];
 
 // Nested Array
-let matrix = [[1,2],[3,4]];
+let matrix = [
+    [1, 2],
+    [3, 4],
+];
 
 // Using Array Constructor
 let arr1 = new Array();
-let arr2 = new Array(5);          // Creates empty array of length 5
-let arr3 = new Array(1,2,3,4);    // [1,2,3,4]
-
+let arr2 = new Array(5); // Creates empty array of length 5
+let arr3 = new Array(1, 2, 3, 4); // [1,2,3,4]
 
 /*
 ===========================================================================================
@@ -55,9 +56,8 @@ let arr3 = new Array(1,2,3,4);    // [1,2,3,4]
 
 let fruits = ["Apple", "Banana", "Mango"];
 
-console.log(typeof fruits);      // object
+console.log(typeof fruits); // object
 console.log(Array.isArray(fruits)); // true
-
 
 /*
 ===========================================================================================
@@ -66,12 +66,11 @@ console.log(Array.isArray(fruits)); // true
 Elements are accessed using their index. Negative indexing is supported only with at().
 */
 
-let nums = [10,20,30,40];
+let nums = [10, 20, 30, 40];
 
-console.log(nums[0]);      //10
-console.log(nums[2]);      //30
-console.log(nums.at(-1));  //40
-
+console.log(nums[0]); //10
+console.log(nums[2]); //30
+console.log(nums.at(-1)); //40
 
 /*
 ===========================================================================================
@@ -80,12 +79,11 @@ console.log(nums.at(-1));  //40
 Arrays are mutable, so elements can be changed using their index.
 */
 
-let marks = [80,85,90];
+let marks = [80, 85, 90];
 
 marks[1] = 95;
 
 console.log(marks); // [80,95,90]
-
 
 /*
 ===========================================================================================
@@ -94,10 +92,9 @@ console.log(marks); // [80,95,90]
 length returns the total number of elements present in the array.
 */
 
-let colors = ["Red","Blue","Green"];
+let colors = ["Red", "Blue", "Green"];
 
 console.log(colors.length); //3
-
 
 /*
 ===========================================================================================
@@ -107,20 +104,19 @@ Elements can be added at the beginning, end, or any specific position.
 */
 
 // push() -> Adds at end
-let arrPush = [1,2];
+let arrPush = [1, 2];
 arrPush.push(3);
 console.log(arrPush); //[1,2,3]
 
 // unshift() -> Adds at beginning
-let arrUnshift = [2,3];
+let arrUnshift = [2, 3];
 arrUnshift.unshift(1);
 console.log(arrUnshift); //[1,2,3]
 
 // splice() -> Insert anywhere
-let arrInsert = [1,3,4];
-arrInsert.splice(1,0,2);
+let arrInsert = [1, 3, 4];
+arrInsert.splice(1, 0, 2);
 console.log(arrInsert); //[1,2,3,4]
-
 
 /*
 ===========================================================================================
@@ -130,20 +126,19 @@ Elements can be removed from beginning, end, or any position.
 */
 
 // pop() -> Removes last element
-let arrPop = [1,2,3];
+let arrPop = [1, 2, 3];
 arrPop.pop();
 console.log(arrPop); //[1,2]
 
 // shift() -> Removes first element
-let arrShift = [1,2,3];
+let arrShift = [1, 2, 3];
 arrShift.shift();
 console.log(arrShift); //[2,3]
 
 // splice() -> Remove anywhere
-let arrRemove = [1,2,3,4];
-arrRemove.splice(1,2);
+let arrRemove = [1, 2, 3, 4];
+arrRemove.splice(1, 2);
 console.log(arrRemove); //[1,4]
-
 
 /*
 ===========================================================================================
@@ -152,11 +147,10 @@ console.log(arrRemove); //[1,4]
 concat() joins two or more arrays and returns a new array without modifying originals.
 */
 
-let x = [1,2];
-let y = [3,4];
+let x = [1, 2];
+let y = [3, 4];
 
 console.log(x.concat(y)); //[1,2,3,4]
-
 
 /*
 ===========================================================================================
@@ -165,13 +159,12 @@ console.log(x.concat(y)); //[1,2,3,4]
 Spread operator and slice() create shallow copies of arrays.
 */
 
-let original = [1,2,3];
+let original = [1, 2, 3];
 
 let copy1 = [...original];
 let copy2 = original.slice();
 
 console.log(copy1);
-
 
 /*
 ===========================================================================================
@@ -181,10 +174,9 @@ slice(start,end) returns a new array without modifying the original array.
 End index is excluded.
 */
 
-let sliceArr = [10,20,30,40,50];
+let sliceArr = [10, 20, 30, 40, 50];
 
-console.log(sliceArr.slice(1,4)); //[20,30,40]
-
+console.log(sliceArr.slice(1, 4)); //[20,30,40]
 
 /*
 ===========================================================================================
@@ -194,12 +186,11 @@ splice(start,deleteCount,items...) modifies the original array. It can insert, d
 or replace elements.
 */
 
-let spliceArr = [1,2,4];
+let spliceArr = [1, 2, 4];
 
-spliceArr.splice(2,0,3);
+spliceArr.splice(2, 0, 3);
 
 console.log(spliceArr); //[1,2,3,4]
-
 
 /*
 ===========================================================================================
@@ -209,20 +200,19 @@ Used to find elements inside an array.
 */
 
 // indexOf()
-console.log([10,20,30].indexOf(20)); //1
+console.log([10, 20, 30].indexOf(20)); //1
 
 // lastIndexOf()
-console.log([1,2,1].lastIndexOf(1)); //2
+console.log([1, 2, 1].lastIndexOf(1)); //2
 
 // includes()
-console.log([10,20,30].includes(30)); //true
+console.log([10, 20, 30].includes(30)); //true
 
 // find()
-console.log([5,10,15].find(x=>x>8)); //10
+console.log([5, 10, 15].find((x) => x > 8)); //10
 
 // findIndex()
-console.log([5,10,15].findIndex(x=>x>8)); //1
-
+console.log([5, 10, 15].findIndex((x) => x > 8)); //1
 
 /*
 ===========================================================================================
@@ -232,18 +222,17 @@ sort() sorts elements alphabetically by default. Numeric sorting requires a comp
 */
 
 // Alphabetical
-let names = ["C","A","B"];
+let names = ["C", "A", "B"];
 names.sort();
 
 console.log(names); //[A,B,C]
 
 // Numeric
-let numSort = [50,2,100];
+let numSort = [50, 2, 100];
 
-numSort.sort((a,b)=>a-b);
+numSort.sort((a, b) => a - b);
 
 console.log(numSort); //[2,50,100]
-
 
 /*
 ===========================================================================================
@@ -252,12 +241,11 @@ console.log(numSort); //[2,50,100]
 reverse() reverses the original array.
 */
 
-let rev = [1,2,3];
+let rev = [1, 2, 3];
 
 rev.reverse();
 
 console.log(rev); //[3,2,1]
-
 
 /*
 ===========================================================================================
@@ -266,8 +254,7 @@ console.log(rev); //[3,2,1]
 join(separator) converts an array into a string.
 */
 
-console.log(["A","B","C"].join("-")); //A-B-C
-
+console.log(["A", "B", "C"].join("-")); //A-B-C
 
 /*
 ===========================================================================================
@@ -276,12 +263,11 @@ console.log(["A","B","C"].join("-")); //A-B-C
 fill(value,start,end) fills array elements with a specified value.
 */
 
-let fillArr = [1,2,3,4];
+let fillArr = [1, 2, 3, 4];
 
-fillArr.fill(0,1,3);
+fillArr.fill(0, 1, 3);
 
 console.log(fillArr); //[1,0,0,4]
-
 
 /*
 ===========================================================================================
@@ -293,7 +279,6 @@ Creates an array from iterable objects or strings.
 console.log(Array.from("Hello"));
 //['H','e','l','l','o']
 
-
 /*
 ===========================================================================================
 19. ARRAY.OF()
@@ -301,9 +286,8 @@ console.log(Array.from("Hello"));
 Creates an array from arguments.
 */
 
-console.log(Array.of(1,2,3));
+console.log(Array.of(1, 2, 3));
 //[1,2,3]
-
 
 /*
 ===========================================================================================
@@ -312,11 +296,10 @@ console.log(Array.of(1,2,3));
 map() creates a new array by applying a function to every element.
 */
 
-let mapArr = [1,2,3];
+let mapArr = [1, 2, 3];
 
-console.log(mapArr.map(x=>x*2));
+console.log(mapArr.map((x) => x * 2));
 //[2,4,6]
-
 
 /*
 ===========================================================================================
@@ -325,11 +308,10 @@ console.log(mapArr.map(x=>x*2));
 filter() returns a new array containing only elements that satisfy a condition.
 */
 
-let filterArr = [1,2,3,4,5];
+let filterArr = [1, 2, 3, 4, 5];
 
-console.log(filterArr.filter(x=>x%2==0));
+console.log(filterArr.filter((x) => x % 2 == 0));
 //[2,4]
-
 
 /*
 ===========================================================================================
@@ -338,11 +320,10 @@ console.log(filterArr.filter(x=>x%2==0));
 reduce() reduces all elements into a single value.
 */
 
-let reduceArr = [1,2,3,4];
+let reduceArr = [1, 2, 3, 4];
 
-console.log(reduceArr.reduce((sum,x)=>sum+x,0));
+console.log(reduceArr.reduce((sum, x) => sum + x, 0));
 //10
-
 
 /*
 ===========================================================================================
@@ -351,8 +332,7 @@ console.log(reduceArr.reduce((sum,x)=>sum+x,0));
 forEach() executes a callback for each element. It does not return a new array.
 */
 
-[10,20,30].forEach(x=>console.log(x));
-
+[10, 20, 30].forEach((x) => console.log(x));
 
 /*
 ===========================================================================================
@@ -361,9 +341,8 @@ forEach() executes a callback for each element. It does not return a new array.
 Returns true if at least one element satisfies the condition.
 */
 
-console.log([1,3,5].some(x=>x%2==0));
+console.log([1, 3, 5].some((x) => x % 2 == 0));
 //false
-
 
 /*
 ===========================================================================================
@@ -372,9 +351,8 @@ console.log([1,3,5].some(x=>x%2==0));
 Returns true only if all elements satisfy the condition.
 */
 
-console.log([2,4,6].every(x=>x%2==0));
+console.log([2, 4, 6].every((x) => x % 2 == 0));
 //true
-
 
 /*
 ===========================================================================================
@@ -383,9 +361,8 @@ console.log([2,4,6].every(x=>x%2==0));
 Flattens nested arrays by the specified depth.
 */
 
-console.log([1,[2,[3]]].flat(2));
+console.log([1, [2, [3]]].flat(2));
 //[1,2,3]
-
 
 /*
 ===========================================================================================
@@ -394,9 +371,8 @@ console.log([1,[2,[3]]].flat(2));
 Applies map() followed by flat(1).
 */
 
-console.log([1,2,3].flatMap(x=>[x,x*2]));
+console.log([1, 2, 3].flatMap((x) => [x, x * 2]));
 //[1,2,2,4,3,6]
-
 
 /*
 ===========================================================================================
@@ -405,12 +381,11 @@ console.log([1,2,3].flatMap(x=>[x,x*2]));
 Most commonly used when index access is required.
 */
 
-let arrFor = [10,20,30];
+let arrFor = [10, 20, 30];
 
-for(let i=0;i<arrFor.length;i++){
+for (let i = 0; i < arrFor.length; i++) {
     console.log(arrFor[i]);
 }
-
 
 /*
 ===========================================================================================
@@ -419,14 +394,13 @@ for(let i=0;i<arrFor.length;i++){
 Useful when the number of iterations isn't fixed beforehand.
 */
 
-let arrWhile = [10,20,30];
-let i=0;
+let arrWhile = [10, 20, 30];
+let i = 0;
 
-while(i<arrWhile.length){
+while (i < arrWhile.length) {
     console.log(arrWhile[i]);
     i++;
 }
-
 
 /*
 ===========================================================================================
@@ -435,15 +409,13 @@ while(i<arrWhile.length){
 Executes the loop body at least once before checking the condition.
 */
 
-let arrDo = [10,20,30];
-let j=0;
+let arrDo = [10, 20, 30];
+let j = 0;
 
-do{
+do {
     console.log(arrDo[j]);
     j++;
-}
-while(j<arrDo.length);
-
+} while (j < arrDo.length);
 
 /*
 ===========================================================================================
@@ -452,12 +424,11 @@ while(j<arrDo.length);
 Returns array values directly. Recommended for simple iteration.
 */
 
-let arrOf = [10,20,30];
+let arrOf = [10, 20, 30];
 
-for(let value of arrOf){
+for (let value of arrOf) {
     console.log(value);
 }
-
 
 /*
 ===========================================================================================
@@ -467,12 +438,11 @@ Returns indexes (property names). Avoid for normal array iteration because it is
 for object properties.
 */
 
-let arrIn = [10,20,30];
+let arrIn = [10, 20, 30];
 
-for(let index in arrIn){
-    console.log(index);      //0 1 2
+for (let index in arrIn) {
+    console.log(index); //0 1 2
 }
-
 
 /*
 ===========================================================================================
@@ -481,10 +451,9 @@ for(let index in arrIn){
 Provides value, index, and original array.
 */
 
-[10,20,30].forEach((value,index,array)=>{
-    console.log(value,index);
+[10, 20, 30].forEach((value, index, array) => {
+    console.log(value, index);
 });
-
 
 /*
 ===========================================================================================
@@ -493,12 +462,11 @@ Provides value, index, and original array.
 Destructuring extracts elements into variables.
 */
 
-let nums1 = [10,20,30];
+let nums1 = [10, 20, 30];
 
-let [first,second,third] = nums1;
+let [first, second, third] = nums1;
 
 console.log(first); //10
-
 
 /*
 ===========================================================================================
@@ -507,11 +475,10 @@ console.log(first); //10
 Spread expands array elements into individual values.
 */
 
-let arrA = [1,2];
-let arrB = [...arrA,3,4];
+let arrA = [1, 2];
+let arrB = [...arrA, 3, 4];
 
 console.log(arrB); //[1,2,3,4]
-
 
 /*
 ===========================================================================================
@@ -520,10 +487,9 @@ console.log(arrB); //[1,2,3,4]
 Rest collects remaining elements into a new array.
 */
 
-let [one,two,...rest] = [1,2,3,4,5];
+let [one, two, ...rest] = [1, 2, 3, 4, 5];
 
 console.log(rest); //[3,4,5]
-
 
 /*
 ===========================================================================================
@@ -533,12 +499,11 @@ Arrays can contain other arrays, forming matrices or nested structures.
 */
 
 let matrix1 = [
-    [1,2],
-    [3,4]
+    [1, 2],
+    [3, 4],
 ];
 
 console.log(matrix1[1][0]); //3
-
 
 /*
 ===========================================================================================
@@ -548,12 +513,11 @@ Spread operator, slice(), concat(), and Array.from() create shallow copies. Nest
 are still shared. Deep copying requires structuredClone() or custom techniques.
 */
 
-let originalObj = [{a:1}];
+let originalObj = [{ a: 1 }];
 
 let shallow = [...originalObj];
 
 console.log(shallow);
-
 
 /*
 ===========================================================================================

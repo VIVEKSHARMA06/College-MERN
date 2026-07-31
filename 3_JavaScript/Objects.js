@@ -14,11 +14,10 @@ the foundation of almost everything in JavaScript.
 
 let person = {
     name: "Vivek",
-    age: 21
+    age: 21,
 };
 
 console.log(person);
-
 
 /*
 ===========================================================================================
@@ -32,10 +31,9 @@ console.log(person);
 6. Objects are unordered collections.
 */
 
-let obj = {a:1,b:2};
+let obj = { a: 1, b: 2 };
 
 console.log(typeof obj); // object
-
 
 /*
 ===========================================================================================
@@ -48,7 +46,7 @@ classes, or Object.create().
 // Object Literal (Recommended)
 let obj1 = {
     name: "Vivek",
-    age: 21
+    age: 21,
 };
 
 // Object Constructor
@@ -57,21 +55,20 @@ obj2.name = "Rahul";
 obj2.age = 20;
 
 // Constructor Function
-function Student(name, age){
+function Student(name, age) {
     this.name = name;
     this.age = age;
 }
 
-let s1 = new Student("Aman",22);
+let s1 = new Student("Aman", 22);
 
 // Object.create()
 let parent = {
-    country:"India"
+    country: "India",
 };
 
 let child = Object.create(parent);
 child.name = "Rohan";
-
 
 /*
 ===========================================================================================
@@ -82,13 +79,12 @@ common, while bracket notation is useful for dynamic property names.
 */
 
 let user = {
-    name:"Vivek",
-    age:21
+    name: "Vivek",
+    age: 21,
 };
 
-console.log(user.name);      // Dot notation
-console.log(user["age"]);    // Bracket notation
-
+console.log(user.name); // Dot notation
+console.log(user["age"]); // Bracket notation
 
 /*
 ===========================================================================================
@@ -104,7 +100,6 @@ car.color = "Black";
 
 console.log(car);
 
-
 /*
 ===========================================================================================
 6. MODIFYING PROPERTIES
@@ -113,13 +108,12 @@ Existing properties can be updated simply by assigning a new value.
 */
 
 let employee = {
-    salary:50000
+    salary: 50000,
 };
 
 employee.salary = 60000;
 
 console.log(employee.salary);
-
 
 /*
 ===========================================================================================
@@ -129,14 +123,13 @@ delete removes a property from an object.
 */
 
 let phone = {
-    brand:"Apple",
-    model:"15 Pro"
+    brand: "Apple",
+    model: "15 Pro",
 };
 
 delete phone.model;
 
 console.log(phone);
-
 
 /*
 ===========================================================================================
@@ -146,12 +139,11 @@ Use the "in" operator or hasOwnProperty() to check whether a property exists.
 */
 
 let student = {
-    name:"Vivek"
+    name: "Vivek",
 };
 
-console.log("name" in student);              // true
+console.log("name" in student); // true
 console.log(student.hasOwnProperty("name")); // true
-
 
 /*
 ===========================================================================================
@@ -161,15 +153,14 @@ Objects can contain other objects, allowing hierarchical data structures.
 */
 
 let person1 = {
-    name:"Vivek",
-    address:{
-        city:"Delhi",
-        pin:110001
-    }
+    name: "Vivek",
+    address: {
+        city: "Delhi",
+        pin: 110001,
+    },
 };
 
 console.log(person1.address.city);
-
 
 /*
 ===========================================================================================
@@ -179,12 +170,11 @@ Objects frequently store arrays.
 */
 
 let course = {
-    title:"JavaScript",
-    topics:["Arrays","Objects","Functions"]
+    title: "JavaScript",
+    topics: ["Arrays", "Objects", "Functions"],
 };
 
 console.log(course.topics[1]);
-
 
 /*
 ===========================================================================================
@@ -194,12 +184,11 @@ Arrays commonly contain multiple objects.
 */
 
 let users = [
-    {id:1,name:"A"},
-    {id:2,name:"B"}
+    { id: 1, name: "A" },
+    { id: 2, name: "B" },
 ];
 
 console.log(users[1].name);
-
 
 /*
 ===========================================================================================
@@ -209,15 +198,12 @@ Functions stored inside objects are called methods.
 */
 
 let calculator = {
-
-    add:function(a,b){
-        return a+b;
-    }
-
+    add: function (a, b) {
+        return a + b;
+    },
 };
 
-console.log(calculator.add(2,3));
-
+console.log(calculator.add(2, 3));
 
 /*
 ===========================================================================================
@@ -227,17 +213,14 @@ Inside an object method, this refers to the object that called the method.
 */
 
 let person2 = {
+    name: "Vivek",
 
-    name:"Vivek",
-
-    greet:function(){
+    greet: function () {
         console.log(this.name);
-    }
-
+    },
 };
 
 person2.greet();
-
 
 /*
 ===========================================================================================
@@ -247,13 +230,12 @@ Returns an array containing all property names.
 */
 
 let book = {
-    title:"JS",
-    price:500
+    title: "JS",
+    price: 500,
 };
 
 console.log(Object.keys(book));
 //['title','price']
-
 
 /*
 ===========================================================================================
@@ -265,7 +247,6 @@ Returns an array containing all property values.
 console.log(Object.values(book));
 //['JS',500]
 
-
 /*
 ===========================================================================================
 16. OBJECT.entries()
@@ -276,7 +257,6 @@ Returns key-value pairs as nested arrays.
 console.log(Object.entries(book));
 //[['title','JS'],['price',500]]
 
-
 /*
 ===========================================================================================
 17. OBJECT.fromEntries()
@@ -285,12 +265,11 @@ Converts key-value pairs back into an object.
 */
 
 let entries = [
-    ["name","Vivek"],
-    ["age",21]
+    ["name", "Vivek"],
+    ["age", 21],
 ];
 
 console.log(Object.fromEntries(entries));
-
 
 /*
 ===========================================================================================
@@ -299,11 +278,10 @@ console.log(Object.fromEntries(entries));
 Copies properties from one or more objects into another object.
 */
 
-let o1 = {a:1};
-let o2 = {b:2};
+let o1 = { a: 1 };
+let o2 = { b: 2 };
 
-console.log(Object.assign({},o1,o2));
-
+console.log(Object.assign({}, o1, o2));
 
 /*
 ===========================================================================================
@@ -313,17 +291,16 @@ Creates shallow copies or merges multiple objects.
 */
 
 let objA = {
-    x:1
+    x: 1,
 };
 
 let objB = {
-    y:2
+    y: 2,
 };
 
-let objC = {...objA,...objB};
+let objC = { ...objA, ...objB };
 
 console.log(objC);
-
 
 /*
 ===========================================================================================
@@ -337,7 +314,6 @@ let data = {};
 console.log(data.user?.name);
 //undefined
 
-
 /*
 ===========================================================================================
 21. NULLISH COALESCING (??)
@@ -349,7 +325,6 @@ let username = null;
 
 console.log(username ?? "Guest");
 
-
 /*
 ===========================================================================================
 22. DESTRUCTURING OBJECTS
@@ -358,16 +333,13 @@ Extracts properties into variables.
 */
 
 let employee1 = {
-
-    id:101,
-    name:"Vivek"
-
+    id: 101,
+    name: "Vivek",
 };
 
-let {id,name} = employee1;
+let { id, name } = employee1;
 
 console.log(name);
-
 
 /*
 ===========================================================================================
@@ -376,10 +348,9 @@ console.log(name);
 Properties can be assigned to variables with different names.
 */
 
-let {name:empName} = employee1;
+let { name: empName } = employee1;
 
 console.log(empName);
-
 
 /*
 ===========================================================================================
@@ -388,10 +359,9 @@ console.log(empName);
 Default values are used if the property doesn't exist.
 */
 
-let {salary=50000} = employee1;
+let { salary = 50000 } = employee1;
 
 console.log(salary);
-
 
 /*
 ===========================================================================================
@@ -403,11 +373,10 @@ Property names can be generated dynamically.
 let key = "age";
 
 let user1 = {
-    [key]:21
+    [key]: 21,
 };
 
 console.log(user1.age);
-
 
 /*
 ===========================================================================================
@@ -417,16 +386,15 @@ Prevents adding, deleting, or modifying properties.
 */
 
 let settings = {
-    theme:"dark"
+    theme: "dark",
 };
 
 Object.freeze(settings);
 
-settings.theme="light";
+settings.theme = "light";
 
 console.log(settings.theme);
 //dark
-
 
 /*
 ===========================================================================================
@@ -436,15 +404,14 @@ Allows modifying existing properties but prevents adding or deleting properties.
 */
 
 let profile = {
-    age:20
+    age: 20,
 };
 
 Object.seal(profile);
 
-profile.age=25;
+profile.age = 25;
 
 console.log(profile.age);
-
 
 /*
 ===========================================================================================
@@ -455,17 +422,14 @@ shared between copies.
 */
 
 let original = {
-
-    address:{
-        city:"Delhi"
-    }
-
+    address: {
+        city: "Delhi",
+    },
 };
 
-let copy = {...original};
+let copy = { ...original };
 
 console.log(copy);
-
 
 /*
 ===========================================================================================
@@ -478,7 +442,6 @@ let deep = structuredClone(original);
 
 console.log(deep);
 
-
 /*
 ===========================================================================================
 30. ITERATING OBJECTS - for...in
@@ -487,16 +450,13 @@ for...in iterates over enumerable property names.
 */
 
 let objLoop = {
-    a:1,
-    b:2
+    a: 1,
+    b: 2,
 };
 
-for(let key in objLoop){
-
-    console.log(key,objLoop[key]);
-
+for (let key in objLoop) {
+    console.log(key, objLoop[key]);
 }
-
 
 /*
 ===========================================================================================
@@ -505,12 +465,9 @@ for(let key in objLoop){
 Returns keys which can then be iterated using for...of.
 */
 
-for(let key of Object.keys(objLoop)){
-
+for (let key of Object.keys(objLoop)) {
     console.log(key);
-
 }
-
 
 /*
 ===========================================================================================
@@ -519,12 +476,9 @@ for(let key of Object.keys(objLoop)){
 Returns values for iteration.
 */
 
-for(let value of Object.values(objLoop)){
-
+for (let value of Object.values(objLoop)) {
     console.log(value);
-
 }
-
 
 /*
 ===========================================================================================
@@ -533,12 +487,9 @@ for(let value of Object.values(objLoop)){
 Returns key-value pairs for iteration.
 */
 
-for(let [key,value] of Object.entries(objLoop)){
-
-    console.log(key,value);
-
+for (let [key, value] of Object.entries(objLoop)) {
+    console.log(key, value);
 }
-
 
 /*
 ===========================================================================================
@@ -548,20 +499,19 @@ Objects are compared by reference, not by values.
 */
 
 let objX = {
-    a:1
+    a: 1,
 };
 
 let objY = {
-    a:1
+    a: 1,
 };
 
-console.log(objX==objY);   //false
-console.log(objX===objY);  //false
+console.log(objX == objY); //false
+console.log(objX === objY); //false
 
 let objZ = objX;
 
-console.log(objX===objZ); //true
-
+console.log(objX === objZ); //true
 
 /*
 ===========================================================================================
@@ -578,7 +528,6 @@ let parsed = JSON.parse(json);
 
 console.log(parsed);
 
-
 /*
 ===========================================================================================
 36. PROPERTY SHORTHAND
@@ -591,11 +540,10 @@ let country = "India";
 
 let location = {
     city,
-    country
+    country,
 };
 
 console.log(location);
-
 
 /*
 ===========================================================================================
@@ -605,15 +553,12 @@ Methods can be written without the function keyword.
 */
 
 let math = {
-
-    add(a,b){
-        return a+b;
-    }
-
+    add(a, b) {
+        return a + b;
+    },
 };
 
-console.log(math.add(5,7));
-
+console.log(math.add(5, 7));
 
 /*
 ===========================================================================================
@@ -623,19 +568,14 @@ Getters allow a method to be accessed like a property.
 */
 
 let rectangle = {
+    width: 10,
 
-    width:10,
-
-    get area(){
-
-        return this.width*2;
-
-    }
-
+    get area() {
+        return this.width * 2;
+    },
 };
 
 console.log(rectangle.area);
-
 
 /*
 ===========================================================================================
@@ -645,19 +585,14 @@ Setters execute whenever a property is assigned.
 */
 
 let person3 = {
-
-    set age(value){
-
-        this._age=value;
-
-    }
-
+    set age(value) {
+        this._age = value;
+    },
 };
 
-person3.age=21;
+person3.age = 21;
 
 console.log(person3._age);
-
 
 /*
 ===========================================================================================
@@ -667,17 +602,14 @@ Every object has an internal prototype from which it inherits properties and met
 */
 
 let animal = {
-
-    eat(){
+    eat() {
         console.log("Eating");
-    }
-
+    },
 };
 
 let dog = Object.create(animal);
 
 dog.eat();
-
 
 /*
 ===========================================================================================
@@ -689,13 +621,10 @@ Symbols create unique property keys that don't conflict with normal string keys.
 let idSymbol = Symbol("id");
 
 let user2 = {
-
-    [idSymbol]:101
-
+    [idSymbol]: 101,
 };
 
 console.log(user2[idSymbol]);
-
 
 /*
 ===========================================================================================
