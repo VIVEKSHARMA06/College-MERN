@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div>
+        <h2>Simple Calculator</h2>
+        <table>
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="display" value="" placeholder="Enter anything" />
+                </td>
+            </tr>
+
+            <tr>
+                <td><button class="text" id="openBracket">(</button></td>
+                <td><button class="text" id="closeBracket">)</button></td>
+                <td><button class="text" id="percent">%</button></td>
+                <td><button  id="clear">AC</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="number text" id="seven">7</button></td>
+                <td><button class="number text" id="eight">8</button></td>
+                <td><button class="number text" id="nine">9</button></td>
+                <td><button class="operator text" id="divide">÷</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="number text" id="four">4</button></td>
+                <td><button class="number text" id="five">5</button></td>
+                <td><button class="number text" id="six">6</button></td>
+                <td><button class="operator text" id="multiply">x</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="number text" id="one">1</button></td>
+                <td><button class="number text" id="two">2</button></td>
+                <td><button class="number text" id="three">3</button></td>
+                <td><button class="operator text" id="minus">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="number text" id="zero">0</button></td>
+                <td><button class="text" id="dot">.</button></td>
+                <td><button class="operator" id="equal">=</button></td>
+                <td><button class="operator text" id="plus">+</button></td>
+            </tr>
+        </table>
+
+        <br><br>
+        <h2 class="error" id="error"></h2>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
